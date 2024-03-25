@@ -104,7 +104,7 @@ def main():
                         help='Output file for csv results')
     parser.add_argument('--repeat', '-r', type=int, default=1,
                         help='Repeat benchmark run')
-    parser.add_argument('--warmup', '-w', type=bool, default=True,
+    parser.add_argument('--warmup', '-w', action='store_true', default=True,
                         help='Run a warmup iteration')
     parser.add_argument('--sycl-type', '-s', choices=['cuda', 'hip', 'opencl', 'cpu'], default='cuda',
                         help='Type of SYCL device to use (default is cuda)')
